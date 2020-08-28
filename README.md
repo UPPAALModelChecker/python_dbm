@@ -33,28 +33,14 @@ Please follow these steps:
 
 Let's create new context with clock variables "x", "y", z":
 
-<table bgcolor="#efefff">
-
-<tbody>
-
-<tr>
-
-<td>
 ``` python  
 >>> from python_dbm import Context  
 >>> c = Context(["x", "y", "z"], "c")  
 ```
-</td>
-</tr>
-</tbody>
-</table>
+
 
 Now we can declare federations of DBMs and operate them in natural way:
 
-<table bgcolor="#efefff">
-<tbody>
-<tr>
-<td>
 ``` python
 >>> a = (c.x < 10) & (c.x - c.y > 1)  
 >>> b = (c.x < 20)  
@@ -67,9 +53,5 @@ False
 >>> print a | b  
 (c.x < 20)  
 ```
-</td>
-</tr>
-</tbody>
-</table>
 
 You can see udbm.py for the complete list of implemented operations over federations of DBMs; test.py contains more examples of usage of this binding.
